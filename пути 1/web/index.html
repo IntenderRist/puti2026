@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Путеводитель — справочник города" />
+  <title>Путеводитель</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar__brand">
+        <div class="brand-icon">
+          <img src="logo.png" alt="Logo" />
+        </div>
+        <div>
+          <h1>Путеводитель метрополитена</h1>
+          <p>Удобный справочник по адресам и объектам</p>
+        </div>
+      </div>
+
+      <nav class="topnav" id="topnav"></nav>
+
+      <div class="topbar__actions">
+        <div id="user-status" class="user-status"></div>
+        <button id="auth-button" class="button button--ghost">Войти</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section id="app-root" class="page-root"></section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal modal--hidden" aria-hidden="true">
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal__close" aria-label="Закрыть">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast toast--hidden"></div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="app.js"></script>
+</body>
+</html>
